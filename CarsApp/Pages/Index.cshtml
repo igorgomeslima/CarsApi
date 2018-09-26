@@ -1,0 +1,33 @@
+﻿@page "/"
+@using CarsClient
+@inject CarsClient.Client CarsClient
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<h2>Cars</h2>
+
+@if (cars != null)
+{
+    <ul>
+        @foreach (var car in cars)
+        {
+            <li>@car.Name</li>
+        }
+    </ul>
+}
+else
+{
+    <text>Finding cars...</text>
+}
+
+@functions {
+    IEnumerable<Car> cars;
+
+    protected override async Task OnInitAsync()
+    {
+        cars = await CarsClient.ApiCarsGetAsync();
+    }
+}

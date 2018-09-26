@@ -1,4 +1,4 @@
-# What's New in ASP.NET Core? 2.2
+# Sample project with "What's New in ASP.NET Core 2.2"
 
 ASP.NET Core 2.2 features:
 

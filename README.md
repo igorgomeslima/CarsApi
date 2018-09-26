@@ -20,4 +20,4 @@ ASP.NET Core 2.2 features:
 - Easier to monitor (Health checks integration)
 - Improved performance (HTTP/2, endpoint routing, IIS in-proc hosting).
 
-Video> https://www.youtube.com/watch?v=DDBmvOPfqzA
+S104 - What's New in ASP.NET Core? https://www.youtube.com/watch?v=DDBmvOPfqzA

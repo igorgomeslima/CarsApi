@@ -30,8 +30,8 @@ dotnet tool install -g --version 2.2.0-* --add-source https://dotnet.myget.org/F
 
 Package Manager Console
 
-*Add-Migration Initial -OutputDir Data/Migrations
-*Update-Database
+Add-Migration Initial -OutputDir Data/Migrations
+Update-Database
 
 NSwag (MSBuild)
 

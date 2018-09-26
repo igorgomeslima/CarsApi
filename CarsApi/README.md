@@ -1,3 +1,4 @@
-<pre><Target Name="NSwag" BeforeTargets="Build">
-   <Exec Command="$(NSwagExe) swagger2tsclient /input:cars-swagger.json /namespace:$(RootNamespace) /InjectHttpClient:true /UseBaseUrl:true /output:CarsClient.cs" />
+<pre><Target Name="NSwag" AfterTargets="Build">
+    <Exec Command="$(NSwagExe) webapi2swagger /assembly:$(OutDir)/MyWebAssembly.dll /controller:MyNamespace.MyController /output:swagger.json" />
+    <Exec Command="$(NSwagExe) swagger2tsclient /input:swagger.json /output:Scripts/MyController.ts" />
 </Target></pre>

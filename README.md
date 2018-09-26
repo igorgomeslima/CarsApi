@@ -19,3 +19,5 @@ ASP.NET Core 2.2 features:
 - Easier to secure (Web API security (Preview 3))
 - Easier to monitor (Health checks integration)
 - Improved performance (HTTP/2, endpoint routing, IIS in-proc hosting).
+
+Video> https://www.youtube.com/watch?v=DDBmvOPfqzA

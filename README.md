@@ -1,7 +1,6 @@
-# CarsApi
-What's New in ASP.NET Core? 2.2
+# What's New in ASP.NET Core? 2.2
 
-#ASP.NET Core 2.2 features#
+ASP.NET Core 2.2 features:
 
 - Template updates: Bootstrap 4, Angular 6
 - Web API improvements

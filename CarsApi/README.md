@@ -24,3 +24,8 @@ Blazor Template
    - Download and Install -> https://marketplace.visualstudio.com/items?itemName=aspnet.blazor
 
 -----------------------------------------------------------------------------------------------------
+
+
+<Target Name="NSwag" BeforeTargets="Build">
+   <Exec Command="$(NSwagExe) swagger2tsclient /input:cars-swagger.json /namespace:$(RootNamespace) /InjectHttpClient:true /UseBaseUrl:true /output:CarsClient.cs" />
+</Target>

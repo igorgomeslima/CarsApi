@@ -22,7 +22,7 @@ ASP.NET Core 2.2 features:
 
 S104 - What's New in ASP.NET Core? https://www.youtube.com/watch?v=DDBmvOPfqzA
 
-
+-----------------------------------------------------------------------------------------------------
 
 -----Instal HTTP REPL
 dotnet tool install -g --version 2.2.0-* --add-source https://dotnet.myget.org/F/dotnet-core/api/v3/index.json dotnet-httprepl

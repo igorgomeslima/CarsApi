@@ -1,0 +1,176 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Cars API"
+  },
+  "paths": {
+    "/api/Cars": {
+      "get": {
+        "tags": [ "Cars" ],
+        "operationId": "ApiCarsGet",
+        "consumes": [],
+        "produces": [ "text/plain", "application/json", "text/json" ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "uniqueItems": false,
+              "type": "array",
+              "items": { "$ref": "#/definitions/Car" }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [ "Cars" ],
+        "operationId": "ApiCarsPost",
+        "consumes": [ "application/json-patch+json", "application/json", "text/json", "application/*+json" ],
+        "produces": [ "text/plain", "application/json", "text/json" ],
+        "parameters": [
+          {
+            "name": "car",
+            "in": "body",
+            "required": false,
+            "schema": { "$ref": "#/definitions/Car" }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "schema": { "$ref": "#/definitions/Car" }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": { "$ref": "#/definitions/ProblemDetails" }
+          },
+          "0": { "schema": { "$ref": "#/definitions/ProblemDetails" } }
+        }
+      }
+    },
+    "/api/Cars/{id}": {
+      "get": {
+        "tags": [ "Cars" ],
+        "operationId": "ApiCarsByIdGet",
+        "consumes": [],
+        "produces": [ "text/plain", "application/json", "text/json" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": { "$ref": "#/definitions/Car" }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": { "$ref": "#/definitions/ProblemDetails" }
+          },
+          "0": { "schema": { "$ref": "#/definitions/ProblemDetails" } }
+        }
+      },
+      "put": {
+        "tags": [ "Cars" ],
+        "operationId": "ApiCarsByIdPut",
+        "consumes": [ "application/json-patch+json", "application/json", "text/json", "application/*+json" ],
+        "produces": [ "text/plain", "application/json", "text/json" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "car",
+            "in": "body",
+            "required": false,
+            "schema": { "$ref": "#/definitions/Car" }
+          }
+        ],
+        "responses": {
+          "204": { "description": "Success" },
+          "404": {
+            "description": "Not Found",
+            "schema": { "$ref": "#/definitions/ProblemDetails" }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": { "$ref": "#/definitions/ProblemDetails" }
+          },
+          "0": { "schema": { "$ref": "#/definitions/ProblemDetails" } }
+        }
+      },
+      "delete": {
+        "tags": [ "Cars" ],
+        "operationId": "ApiCarsByIdDelete",
+        "consumes": [],
+        "produces": [ "text/plain", "application/json", "text/json" ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": { "$ref": "#/definitions/Car" }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": { "$ref": "#/definitions/ProblemDetails" }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": { "$ref": "#/definitions/ProblemDetails" }
+          },
+          "0": { "schema": { "$ref": "#/definitions/ProblemDetails" } }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Car": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "maker": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "year": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "ProblemDetails": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string" },
+        "title": { "type": "string" },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "detail": { "type": "string" },
+        "instance": { "type": "string" }
+      },
+      "additionalProperties": { "type": "object" }
+    }
+  }
+}

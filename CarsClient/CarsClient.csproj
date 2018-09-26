@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NSwag.AspNetCore" Version="11.19.2" />
+    <PackageReference Include="NSwag.CodeGeneration.CSharp" Version="11.19.2" />
+    <PackageReference Include="NSwag.MSBuild" Version="11.19.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <Target Name="NSwag" BeforeTargets="Build">
+    <!--<Exec Command="$(NSwagExe) swagger2tsclient /input:cars-swagger.json /namespace:$(RootNamespace) /InjectHttpClient:true /UseBaseUrl:false /output:CarsClient.cs" />-->
+    <!--<Exec Command="$(NSwagExe) swagger2tsclient /input:cars-swagger.json /output:Scripts/CarsClient.cs" />-->    
+  </Target>
+
+</Project>

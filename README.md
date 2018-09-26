@@ -33,7 +33,7 @@ dotnet tool install -g --version 2.2.0-* --add-source https://dotnet.myget.org/F
 *Add-Migration Initial -OutputDir Data/Migrations
 *Update-Database
 
-[NSwag (MSBuild)]
+NSwag (MSBuild)
 
 <Target Name="NSwag" BeforeTargets="Build">
    <Exec Command="$(NSwagExe) swagger2tsclient /input:cars-swagger.json /namespace:$(RootNamespace) /InjectHttpClient:true /UseBaseUrl:true /output:CarsClient.cs" />

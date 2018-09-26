@@ -13,10 +13,13 @@ Update-Database
 
 - NSwag (MSBuild)
 
-``XML
-<Target Name="NSwag" BeforeTargets="Build">
-   <Exec Command="$(NSwagExe) swagger2tsclient /input:cars-swagger.json /namespace:$(RootNamespace) /InjectHttpClient:true /UseBaseUrl:true /output:CarsClient.cs" />
-</Target>``
+
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 - Blazor Template
 

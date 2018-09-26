@@ -22,9 +22,9 @@ Update-Database
 
 - Blazor Template
 
-- To use Blazor Template
-   - Minimum: .NET Core 2.1 SDK (2.1.302) and Visual Studio 2017 (15.7 or later)
-   - Download and Install -> https://marketplace.visualstudio.com/items?itemName=aspnet.blazor
+   - To use Blazor Template
+      - Minimum: .NET Core 2.1 SDK (2.1.302) and Visual Studio 2017 (15.7 or later)
+      - Download and Install -> https://marketplace.visualstudio.com/items?itemName=aspnet.blazor
 
 -----------------------------------------------------------------------------------------------------
 

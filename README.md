@@ -9,3 +9,13 @@ ASP.NET Core 2.2 features:
 - Health checks
 - Endpoint routing
 - SignalR Java Client
+
+-------------------------------------------
+
+- Easier to create (API Scaffolding)
+- Easier to test & debug (HTTP REPL, Problem Details)
+- Easier to document (API convetions & analyzer)
+- Easier to consume (Code genration (Preview 3))
+- Easier to secure (Web API security (Preview 3))
+- Easier to monitor (Health checks integration)
+- Improved performance (HTTP/2, endpoint routing, IIS in-proc hosting).
